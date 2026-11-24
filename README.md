@@ -30,3 +30,8 @@ then a neighbouring cell to step or a red unit to shoot; Space ends the turn.
 
 See [AGENTS.md](AGENTS.md) for project rules and [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
 for the design. The art is placeholder geometry for now.
+
+## License
+
+The code is released under the [MIT License](LICENSE). Third-party assets added later keep
+their own licenses, listed in [CREDITS.md](CREDITS.md).
