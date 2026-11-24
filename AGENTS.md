@@ -7,7 +7,7 @@ licensed sources (CC0, Unity Asset Store Standard EULA, CC-BY with credits in CR
 original work; never copy assets or data from other games.
 
 The repository is public and MIT-licensed. Asset Store and other paid assets forbid
-redistribution of their source files: keep them out of git (see .gitignore) and record
+redistribution of their source files: import them under `Assets/ThirdParty/` (ignored by git) and record
 only their names and licenses in CREDITS.md.
 
 Architecture follows the `unity-game-architect` skill. Short version:

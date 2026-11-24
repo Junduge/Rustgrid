@@ -18,3 +18,8 @@ games/*/unity/*.sln
 games/*/unity/*.slnx
 games/*/unity/.vsconfig
 games/*/unity/Assets/StreamingAssets/tactics/
+
+# Licensed third-party assets that may not be redistributed (Asset Store, Fab, paid packs).
+# Import them under this folder; each developer restores them from their own purchase.
+games/*/unity/Assets/ThirdParty/
+games/*/unity/Assets/ThirdParty.meta
