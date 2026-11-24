@@ -1,0 +1,10 @@
+{
+  "name": "com.rustgrid.tactics.agents",
+  "version": "0.1.0",
+  "displayName": "Rustgrid Tactics Agents",
+  "description": "Engine-free bots that play the tactics core through its public commands.",
+  "unity": "6000.3",
+  "dependencies": {
+    "com.rustgrid.tactics.core": "0.1.0"
+  }
+}

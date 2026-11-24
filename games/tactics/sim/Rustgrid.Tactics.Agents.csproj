@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Same sources as Unity's Rustgrid.Tactics.Agents.asmdef. -->
+  <PropertyGroup>
+    <AssemblyName>Rustgrid.Tactics.Agents</AssemblyName>
+    <RootNamespace>Rustgrid.Tactics.Agents</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\unity\Packages\com.rustgrid.tactics.agents\Runtime\**\*.cs" LinkBase="Runtime" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Rustgrid.Tactics.Core.csproj" />
+    <ProjectReference Include="..\..\..\packages\com.rustgrid.shared.sim\Dotnet~\Rustgrid.Shared.Sim.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- NUnit 3 so the same test files can later run in Unity Test Framework (an NUnit 3.5 fork). -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <EnableDefaultCompileItems>true</EnableDefaultCompileItems>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Include="NUnit" Version="3.14.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="5.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rustgrid.Tactics.Core.csproj" />
+    <ProjectReference Include="..\Rustgrid.Tactics.Agents.csproj" />
+    <ProjectReference Include="..\..\..\..\packages\com.rustgrid.shared.sim\Dotnet~\Rustgrid.Shared.Sim.csproj" />
+  </ItemGroup>
+</Project>

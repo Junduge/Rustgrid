@@ -1,0 +1,11 @@
+{
+  "name": "com.rustgrid.tactics.core",
+  "version": "0.1.0",
+  "displayName": "Rustgrid Tactics Core",
+  "description": "Engine-free battle rules: state, commands, events, level data. Shared by Unity, bots and tests.",
+  "unity": "6000.3",
+  "dependencies": {
+    "com.rustgrid.shared.sim": "0.1.0",
+    "com.unity.nuget.newtonsoft-json": "3.2.2"
+  }
+}

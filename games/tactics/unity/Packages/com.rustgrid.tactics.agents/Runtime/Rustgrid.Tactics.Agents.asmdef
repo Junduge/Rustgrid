@@ -1,0 +1,17 @@
+{
+  "name": "Rustgrid.Tactics.Agents",
+  "rootNamespace": "Rustgrid.Tactics.Agents",
+  "references": [
+    "Rustgrid.Shared.Sim",
+    "Rustgrid.Tactics.Core"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": true
+}

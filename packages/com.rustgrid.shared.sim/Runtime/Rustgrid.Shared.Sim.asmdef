@@ -1,0 +1,14 @@
+{
+  "name": "Rustgrid.Shared.Sim",
+  "rootNamespace": "Rustgrid.Shared.Sim",
+  "references": [],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": true
+}

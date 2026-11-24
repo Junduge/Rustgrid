@@ -1,0 +1,20 @@
+# .NET
+/artifacts/
+/out/
+*.user
+.vs/
+TestResults/
+
+# Unity (per project)
+games/*/unity/[Ll]ibrary/
+games/*/unity/[Tt]emp/
+games/*/unity/[Oo]bj/
+games/*/unity/[Bb]uild/
+games/*/unity/[Bb]uilds/
+games/*/unity/[Ll]ogs/
+games/*/unity/[Uu]ser[Ss]ettings/
+games/*/unity/*.csproj
+games/*/unity/*.sln
+games/*/unity/*.slnx
+games/*/unity/.vsconfig
+games/*/unity/Assets/StreamingAssets/tactics/

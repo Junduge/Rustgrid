@@ -1,0 +1,22 @@
+{
+  "name": "Rustgrid.Tactics.Authoring",
+  "rootNamespace": "Rustgrid.Tactics.Authoring",
+  "references": [
+    "Rustgrid.Shared.Sim",
+    "Rustgrid.Tactics.Core",
+    "Rustgrid.Tactics.Agents",
+    "Rustgrid.Tactics.Presentation",
+    "Rustgrid.Tactics.Composition"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

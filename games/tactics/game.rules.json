@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "determinism": "cross-device",
+  "step_ap": 2,
+  "weapons": [
+    { "id": "pistol",  "ap": 5, "range": 10, "optimal_range": 5, "accuracy": 75, "accuracy_falloff": 5,  "damage_min": 12, "damage_max": 18, "projectiles": 1, "critical_chance": 10 },
+    { "id": "rifle",   "ap": 8, "range": 16, "optimal_range": 9, "accuracy": 80, "accuracy_falloff": 4,  "damage_min": 25, "damage_max": 35, "projectiles": 1, "critical_chance": 8 },
+    { "id": "smg",     "ap": 7, "range": 10, "optimal_range": 4, "accuracy": 60, "accuracy_falloff": 7,  "damage_min": 30, "damage_max": 45, "projectiles": 3, "critical_chance": 5 },
+    { "id": "shotgun", "ap": 9, "range": 6,  "optimal_range": 2, "accuracy": 70, "accuracy_falloff": 12, "damage_min": 40, "damage_max": 60, "projectiles": 6, "critical_chance": 3 }
+  ]
+}

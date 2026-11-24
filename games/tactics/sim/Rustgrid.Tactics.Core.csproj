@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!--
+    Compiles THE SAME sources Unity compiles through Rustgrid.Tactics.Core.asmdef: no DLL, no copies.
+    netstandard2.1 / C# 9 come from Directory.Build.props.
+  -->
+  <PropertyGroup>
+    <AssemblyName>Rustgrid.Tactics.Core</AssemblyName>
+    <RootNamespace>Rustgrid.Tactics.Core</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\unity\Packages\com.rustgrid.tactics.core\Runtime\**\*.cs" LinkBase="Runtime" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Keep the major version in step with Unity's com.unity.nuget.newtonsoft-json (3.2.x = Newtonsoft.Json 13.0.x). -->
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\packages\com.rustgrid.shared.sim\Dotnet~\Rustgrid.Shared.Sim.csproj" />
+  </ItemGroup>
+</Project>

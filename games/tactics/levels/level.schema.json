@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "rustgrid/tactics/level.schema.json",
+  "title": "Tactics battle map",
+  "description": "Identity is (level_id, level_hash). The core computes level_hash from rules and board (TacticsData.LevelHash); it is never stored here, so edits to metadata (level_id, level_index, spec) keep it. Validation rules beyond this schema live in TacticsData.ValidateLevel.",
+  "type": "object",
+  "required": ["schema_version", "level_id", "spec", "rules", "board"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": 1 },
+    "level_id": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+    "level_index": { "type": "integer", "minimum": 1 },
+    "spec": {
+      "type": "object",
+      "required": ["label", "mechanics"],
+      "additionalProperties": false,
+      "properties": {
+        "label": { "type": "string", "enum": ["intro", "easy", "normal", "hard", "super_hard", "relief"] },
+        "mechanics": { "type": "array", "items": { "type": "string" }, "uniqueItems": true, "maxItems": 4 },
+        "target_side0_win_percent": {
+          "type": "array", "items": { "type": "integer", "minimum": 0, "maximum": 100 }, "minItems": 2, "maxItems": 2,
+          "description": "[min, max] percent of side-0 wins when the same bot plays every side (map fairness)"
+        },
+        "notes": { "type": "string", "maxLength": 500 }
+      }
+    },
+    "rules": {
+      "type": "object",
+      "required": ["max_turns"],
+      "additionalProperties": false,
+      "properties": {
+        "max_turns": { "type": "integer", "minimum": 1, "maximum": 999, "description": "Rounds before the battle ends in a draw" },
+        "first_side": { "type": "integer", "minimum": 0, "default": 0 }
+      }
+    },
+    "board": {
+      "type": "object",
+      "required": ["rows", "units"],
+      "additionalProperties": false,
+      "properties": {
+        "rows": {
+          "type": "array", "minItems": 1, "maxItems": 64,
+          "items": { "type": "string", "pattern": "^[.#]{1,64}$" },
+          "description": "rows[y][x]: '.' floor, '#' wall (blocks movement and sight); all rows have the same length"
+        },
+        "units": {
+          "type": "array", "minItems": 2,
+          "items": {
+            "type": "object",
+            "required": ["id", "side", "x", "y", "hp", "ap", "weapon"],
+            "additionalProperties": false,
+            "properties": {
+              "id": { "type": "integer", "minimum": 1 },
+              "side": { "type": "integer", "minimum": 0, "maximum": 7 },
+              "x": { "type": "integer", "minimum": 0 },
+              "y": { "type": "integer", "minimum": 0 },
+              "hp": { "type": "integer", "minimum": 1, "maximum": 9999 },
+              "ap": { "type": "integer", "minimum": 1, "maximum": 255 },
+              "weapon": { "type": "string", "description": "Weapon id from game.rules.json" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Rustgrid.Tactics.Composition",
+  "rootNamespace": "Rustgrid.Tactics.Composition",
+  "references": [
+    "Rustgrid.Shared.Sim",
+    "Rustgrid.Tactics.Core",
+    "Rustgrid.Tactics.Agents",
+    "Rustgrid.Tactics.Presentation"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

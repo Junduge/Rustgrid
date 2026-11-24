@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "level_id": "arena_01",
+  "level_index": 1,
+  "spec": {
+    "label": "normal",
+    "mechanics": [
+      "move",
+      "shoot",
+      "cover"
+    ],
+    "target_side0_win_percent": [
+      40,
+      60
+    ],
+    "notes": "Symmetric 2v2 (180-degree rotation). Fairness check: equal bots should split wins."
+  },
+  "rules": {
+    "max_turns": 30,
+    "first_side": 0
+  },
+  "board": {
+    "rows": [
+      "..............",
+      "..............",
+      "...##....##...",
+      "...#......#...",
+      "......##......",
+      ".#..........#.",
+      ".#...#......#.",
+      ".#......#...#.",
+      ".#..........#.",
+      "......##......",
+      "...#......#...",
+      "...##....##...",
+      "..............",
+      ".............."
+    ],
+    "units": [
+      {
+        "id": 1,
+        "side": 0,
+        "x": 5,
+        "y": 1,
+        "hp": 100,
+        "ap": 20,
+        "weapon": "rifle"
+      },
+      {
+        "id": 2,
+        "side": 0,
+        "x": 8,
+        "y": 1,
+        "hp": 100,
+        "ap": 20,
+        "weapon": "smg"
+      },
+      {
+        "id": 3,
+        "side": 1,
+        "x": 8,
+        "y": 12,
+        "hp": 100,
+        "ap": 20,
+        "weapon": "rifle"
+      },
+      {
+        "id": 4,
+        "side": 1,
+        "x": 5,
+        "y": 12,
+        "hp": 100,
+        "ap": 20,
+        "weapon": "smg"
+      }
+    ]
+  }
+}

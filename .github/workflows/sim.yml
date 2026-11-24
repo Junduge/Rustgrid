@@ -1,0 +1,27 @@
+# Core gate on every PR, without Unity.
+name: sim
+on:
+  pull_request:
+    paths: ['games/**/sim/**', 'games/**/levels/**', 'games/**/game.rules.json', 'games/**/unity/Packages/**', 'packages/**', 'tools/**', '.github/workflows/sim.yml']
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions: { contents: read }
+concurrency: { group: sim-${{ github.ref }}, cancel-in-progress: true }
+
+jobs:
+  core:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-dotnet@v4
+        with: { dotnet-version: '10.0.x' }
+      - name: Core tests
+        run: dotnet test Rustgrid.sln -c Release --blame-hang-timeout 5m
+      - name: Bot runs
+        run: dotnet run --project tools/Rustgrid.Sim.Runner -c Release -- --sides greedy,greedy --episodes 1000 --seed ${{ github.run_id }} --out out/greedy.jsonl
+      - uses: actions/upload-artifact@v5
+        if: always()
+        with: { name: bot-runs, path: out/, retention-days: 30 }

@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Unity ignores folders ending in "~"; this project compiles the same Runtime sources for dotnet. -->
+  <PropertyGroup>
+    <AssemblyName>Rustgrid.Shared.Sim</AssemblyName>
+    <RootNamespace>Rustgrid.Shared.Sim</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\Runtime\**\*.cs" LinkBase="Runtime" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "level_id": "outpost_01",
+  "level_index": 2,
+  "spec": {
+    "label": "normal",
+    "mechanics": [
+      "move",
+      "shoot",
+      "cover"
+    ],
+    "target_side0_win_percent": [
+      35,
+      65
+    ],
+    "notes": "3 entrenched defenders against 4 raiders. Asymmetric; tune hp/weapons, not walls."
+  },
+  "rules": {
+    "max_turns": 30,
+    "first_side": 1
+  },
+  "board": {
+    "rows": [
+      "################",
+      "#..............#",
+      "#..####..####..#",
+      "#..#........#..#",
+      "#..#........#..#",
+      "#..###.##.###..#",
+      "#..............#",
+      "#..............#",
+      "#....#....#....#",
+      "#..............#",
+      "#..............#",
+      "#....#....#....#",
+      "#..............#",
+      "#..............#",
+      "#..............#",
+      "################"
+    ],
+    "units": [
+      {
+        "id": 1,
+        "side": 0,
+        "x": 5,
+        "y": 3,
+        "hp": 90,
+        "ap": 20,
+        "weapon": "rifle"
+      },
+      {
+        "id": 2,
+        "side": 0,
+        "x": 8,
+        "y": 4,
+        "hp": 90,
+        "ap": 20,
+        "weapon": "shotgun"
+      },
+      {
+        "id": 3,
+        "side": 0,
+        "x": 10,
+        "y": 3,
+        "hp": 90,
+        "ap": 20,
+        "weapon": "pistol"
+      },
+      {
+        "id": 4,
+        "side": 1,
+        "x": 2,
+        "y": 13,
+        "hp": 70,
+        "ap": 20,
+        "weapon": "smg"
+      },
+      {
+        "id": 5,
+        "side": 1,
+        "x": 6,
+        "y": 13,
+        "hp": 70,
+        "ap": 20,
+        "weapon": "smg"
+      },
+      {
+        "id": 6,
+        "side": 1,
+        "x": 9,
+        "y": 13,
+        "hp": 70,
+        "ap": 20,
+        "weapon": "pistol"
+      },
+      {
+        "id": 7,
+        "side": 1,
+        "x": 13,
+        "y": 13,
+        "hp": 70,
+        "ap": 20,
+        "weapon": "smg"
+      }
+    ]
+  }
+}
